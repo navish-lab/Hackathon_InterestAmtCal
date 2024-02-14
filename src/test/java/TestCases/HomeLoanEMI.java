@@ -39,7 +39,7 @@ public class HomeLoanEMI extends CarLoanEMI {
 			
 			emiCalculatorPage.clickOnHomeLoanEmiCalculator();
 			
-			// homeLoanPage.handleAdvertisement();
+			homeLoanPage.handleAdvertisement();
 		}
 		catch (Exception e) {
 			// TODO: handle exception
