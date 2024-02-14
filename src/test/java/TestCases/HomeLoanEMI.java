@@ -33,25 +33,16 @@ public class HomeLoanEMI extends CarLoanEMI {
 	public void homeLoanEmiCalculatorValidation() throws InterruptedException {
 		
 		logger.info("****** Starting TC_008 Home Loan Calculator Page ******");
-		
-		try {
-			homeLoanPage = new HomeLoanPage(driver);
+		homeLoanPage = new HomeLoanPage(driver);
 			
-			emiCalculatorPage.clickOnHomeLoanEmiCalculator();
+		emiCalculatorPage.clickOnHomeLoanEmiCalculator();
 			
-			homeLoanPage.handleAdvertisement();
-		}
-		catch (Exception e) {
-			// TODO: handle exception
-			homeLoanPage.handleAdvertisement();
-		}
-		finally {
+		homeLoanPage.handleAdvertisement();
+
+		boolean result = homeLoanPage.validateHomeLoanEmiCalculator();
 			
-			boolean result = homeLoanPage.validateHomeLoanEmiCalculator();
-			
-			Assert.assertEquals(true, result);
-		}
-		
+		Assert.assertEquals(true, result);
+
 		logger.info("****** finished TC_008 Home Loan Calculator Page ******");
 	}
 	
