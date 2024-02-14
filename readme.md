@@ -1,4 +1,4 @@
-#**Hackathon Project: Find the Interest Amount for current year**
+**Hackathon Project: Find the Interest Amount for current year**
 
 **Project Overview**
  
