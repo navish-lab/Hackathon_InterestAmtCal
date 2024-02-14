@@ -154,19 +154,20 @@ public class HomeLoanPage extends BasePage{
 	
 	// Method to handle Advertisement
 	public void handleAdvertisement() throws InterruptedException {
-		
-		Thread.sleep(3000);
-		// first iframe
-		driver.switchTo().frame(firstIframeElement);
-		
-		// second iframe
-		driver.switchTo().frame(advertisementIframeElement);
-		
-		advertisementDismissButtonElement.click();
-		
-		driver.switchTo().defaultContent();
-		
-		
+		try {
+			boolean res = firstIframeElement.isDisplayed();
+			if(res) {
+				// first iframe
+				driver.switchTo().frame(firstIframeElement);
+				// second iframe
+				driver.switchTo().frame(advertisementIframeElement);
+				advertisementDismissButtonElement.click();
+				driver.switchTo().defaultContent();
+			}
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	// Method to set the home value amount
