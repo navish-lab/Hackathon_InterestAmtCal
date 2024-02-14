@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Car Loan Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="CarLoan"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestCases.LoanTenureCalculatorUICheck">
+        <methods>
+          <include name="setInterestRate" invocation-numbers="0"/>
+          <include name="setCarAmount" invocation-numbers="0"/>
+          <include name="setLoanTenure" invocation-numbers="0"/>
+          <include name="clickOnyear"/>
+          <include name="readData"/>
+          <include name="clickOnCarLoanLink"/>
+        </methods>
+      </class> <!-- TestCases.LoanTenureCalculatorUICheck -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Car Loan Suite] -->
